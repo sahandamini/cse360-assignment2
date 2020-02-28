@@ -95,11 +95,30 @@ public void append(int parameter) {
 }
 
 public int first() { // returns first element in array
-	return list[0];
+	if (list.length > 0) {
+		return list[0];
+	}
+	else {
+		return -1;
+	}
+}
+
+public int last() { // returns last element in array
+	if (list.length > 0) {
+		return list[count-1];
+	}
+	else {
+		return -1;
+	}
 }
 
 public int size() { // returns number of empty elements in array
-	return list.length-count;
+	if (list.length > 0) {
+		return list.length-count;
+	}
+	else {
+		return -1;
+	}
 }
 
 }
